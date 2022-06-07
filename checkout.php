@@ -30,9 +30,9 @@ if(isset($_POST['order_btn'])){
     $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment, o_paymentimg, total_price, total_product)
     VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$paymentimg', '$price_total','$total_product')") or die('query failed');
    
-   if (mysqli_query($con, $sql && $cart_query) === TRUE) {
-    echo "New record created successfully";
-    } 
+//    if (mysqli_query($con, $sql && $cart_query) === TRUE) {
+//     echo "New record created successfully";
+//     } 
 }
  ?>
  <form method="POST" action="">

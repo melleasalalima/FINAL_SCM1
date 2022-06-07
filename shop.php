@@ -58,8 +58,7 @@
                             <i class="animate__animated animate__rollIn animate__rollOut active animate__infinite fa fa-fish"></i> 
                             <h3 class="card-title"><?php echo $row['p_name'];?></h3>
                             <h5> 
-                            <small><s><?php echo $row['p_price'];?></s></small>
-                            ₱ <?php echo $row['p_price'];?>
+                                ₱ <?php echo $row['p_price'];?>
                             </h5>
                             <p class="card-text"> 
 

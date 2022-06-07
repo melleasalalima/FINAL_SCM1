@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once('php/item-card.php');
     require_once('php/functions.php');
     include ('includes/header.php');

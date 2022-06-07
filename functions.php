@@ -22,7 +22,7 @@ if (isset($_POST['register_btn'])) {
 // REGISTER USER
 function register(){
 	// call these variables with the global keyword to make them available in function
-	global $db, $errors, $username, $email, $fname, $mname, $lname, $address, $contact_num;
+	global $db, $errors, $username, $user_type, $email, $fname, $mname, $lname, $address, $contact_num;
 
 	// receive all input values from the form. Call the e() function
     // defined below to escape form values
@@ -32,7 +32,7 @@ function register(){
 	$mname       =  e($_POST['mname']);
 	$lname       =  e($_POST['lname']);
 	$address     =  e($_POST['address']);
-	$contact_num =  e($_POST['contact_num']);
+	$contact_num =  e($_POST['contact_num']);   
 	$password_1  =  e($_POST['password_1']);
 	$password_2  =  e($_POST['password_2']);
 
