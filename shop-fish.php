@@ -3,8 +3,6 @@
     include('php/functions.php');
     include('shop-functions/shop-functions.php');
 
-
-
     if(isset($_POST['add_to_cart'])){
         $p_id = $_POST['id'];
         $p_name = $_POST['p_name'];
@@ -40,13 +38,12 @@
     ?>
     <div class="container">
     <h1><i class="fa fa-shopping-cart"></i> Shop All Items </h1><br>
-    <!-- HREF FOR CATEGORIES -->
     <a href="shop.php"> Shop All </a> || <a href="shop-squid.php"> Shop Squid </a> || <a href="shop-fish.php"> Shop Fish </a>
         <div class="row text-center py-5">
             <?php
 
-                if($shop_all->num_rows>0){  
-                while($row=$shop_all->fetch_assoc()){
+                if($shop_fish->num_rows>0){  
+                while($row=$shop_fish->fetch_assoc()){
             ?>
             <div class="col-md-3 col-sm-6 my-3 my-md-0 p-2">
                 <form action="" method="post">
