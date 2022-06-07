@@ -4,6 +4,10 @@
     $search="";
     $rowcount=0;
     $con=new mysqli('localhost', 'u579272454_velen', 'Mamamopink123', 'u579272454_scm') or die (mysqli_error($mysqli));
+    
+    date_default_timezone_set('Asia/Manila');
+    $order_date = date('Y-m-d', strtotime(' +1 day'));
+    $maxorder_date = date('Y-m-d', strtotime(' +7 day'));
 
     if(isset($_POST['update_product'])){
         $update_p_id = $_POST['update_p_id'];
