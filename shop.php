@@ -10,6 +10,7 @@
         $p_image = $_POST['p_img'];
         $p_quantity = $_POST['cp_qty'];;
 
+        // $sel_inv = mysqli_query($con, "SELECT * FROM `inventory`");
         $sel_cart = mysqli_query($con, "SELECT * FROM `cart` WHERE cp_name = '$p_name'");
         if(mysqli_num_rows($sel_cart) > 0){
             $message[] = 'Product has already been added to cart';
@@ -77,7 +78,8 @@
                             </p>
                             <?php
                                 $prod_qty = $row['num_stocks'];
-                                if($prod_qty <= '0'){   
+                                $prod_status = $row['inactive'];
+                                if($prod_qty <= '0' || $prod_status = 'inactive'){   
                             ?>
                             <p>
                             <input type="number" disabled name="cp_qty" min="1" max="<?php echo $row['num_stocks'];?>" value="1">
