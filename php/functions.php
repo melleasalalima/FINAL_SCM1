@@ -1,9 +1,9 @@
 <?php
     #database connection
-    $db = mysqli_connect('localhost','root','','scm') or die (mysqli_error($mysqli));
+    $db = mysqli_connect('localhost', 'u579272454_velen', 'Mamamopink123', 'u579272454_scm')or die (mysqli_error($mysqli));
     $search="";
     $rowcount=0;
-    $con=new mysqli('localhost','root','','scm') or die (mysqli_error($mysqli));
+    $con=new mysqli('localhost', 'u579272454_velen', 'Mamamopink123', 'u579272454_scm') or die (mysqli_error($mysqli));
 
     if(isset($_POST['update_product'])){
         $update_p_id = $_POST['update_p_id'];
