@@ -1,0 +1,55 @@
+/* img{
+    max-width: 100%;
+    height: auto;
+    background: lightblue;
+    background: radial-gradient(white 30%, lightblue 70%); 
+} */
+/* Carousel */
+    /* .carousel-inner{
+        max-width:fit-content;
+        max-height: 90px;
+    } */
+/* Marquee  */
+    /* Makes the animation pause on hover */
+    .moving-text:hover{
+        animation-play-state: paused;
+    }
+
+    /* The animation */
+    @keyframes marquee{
+        0%{transform: translateX(100%);}
+        100%{transform: translateX(-100%);}
+    }
+
+    /* media query to enable animation for only those who want it */
+    @media (prefers-reduced-motion: no-preference) {
+        .moving-text{
+            animation: marquee 30s linear infinite;
+        }
+    }
+    .moving-text{
+        font-size: 12px;
+        max-width: fit-content;
+        max-height: 18px;
+    }
+
+/* Cart Card */
+    .fa-star{
+        color: red;
+        padding: 3% 0%;
+    }
+    .card{
+        overflow: hidden;
+        max-width: 100%;
+        max-height: auto;
+    }
+    .card-text{
+        font-size: 14px;
+        justify-content: center;
+        word-wrap: break-word;
+    }
+    .card-body{
+        word-wrap: break-word;
+    }
+    
+/* USER ACC STYLING */
