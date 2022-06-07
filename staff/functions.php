@@ -2,7 +2,7 @@
 session_start();
 
 // connect to database
-$db = mysqli_connect('localhost', 'root', '', 'scm');
+$db = mysqli_connect('localhost', 'u579272454_velen', 'Mamamopink123', 'u579272454_scm');
 
 // variable declaration
 $username = "";
