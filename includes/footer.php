@@ -92,7 +92,7 @@
                     <p><span class="bi bi-house-door-fill"></span> Farmers Market, Araneta Center Cubao, Quezon City 1109 Quezon City, Philippines</p>
                     <p>
                         <span class="bi bi-envelope-fill"></span>
-                        abegaillandicho20@gmail.com
+                        VelenAnaSeafoodsDealer@email.com
                     </p>
                     <p><span class="bi bi-telephone-fill"></span> +639276059354</p>
                 </div>
