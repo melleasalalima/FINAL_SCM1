@@ -3,7 +3,6 @@
     require_once('php/functions.php');
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>

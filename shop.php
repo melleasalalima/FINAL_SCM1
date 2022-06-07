@@ -82,7 +82,7 @@
                                 if( $prod_qty <= '0' || $prod_status == "inactive" ){   
                             ?>
                             <p>
-                            <input type="number" disabled name="cp_qty" min="1" max="<?php echo $row['num_stocks'];?>" value="1">
+                            <input type="number" disabled name="cp_qty" min="0" max="<?php echo $row['num_stocks'];?>" value="1">
                             </p>
                             <button type="submit" name="add"class="btn btn-danger my-3" disabled>
                                 <i class="fa fa-octagon-exclamation"></i>
