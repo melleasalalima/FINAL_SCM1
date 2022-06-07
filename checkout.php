@@ -36,7 +36,7 @@ if(isset($_POST['order_btn'])){
 //       <span aria-hidden=\"true\">&times;</span>
 //     </button></div>";
 //     } 
-// }
+}
  ?>
  <form method="POST" action="">
     <div class="container">
