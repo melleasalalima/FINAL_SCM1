@@ -101,7 +101,7 @@
         <td>₱<?php echo $row['p_price'];?></td>
         <td><?php echo $row['num_stocks'];?> Kilo/s</td>
         <td><?php echo $row['p_desc'];?></td>
-        <td><?php echo $row['p_img'];?></td>
+        <td><img src="<?php echo $row['p_img'];?>" width="40" height="40"></td>
         <td><?php echo $row['p_type'];?></td>
         <td><?php echo $row['p_status'];?></td>
         <td>
