@@ -78,7 +78,7 @@
                             </p>
                             <?php
                                 $prod_qty = $row['num_stocks'];
-                                $prod_status = $row['inactive'];
+                                $prod_status = $row['p_status'];
                                 if($prod_qty <= '0' || $prod_status = 'inactive'){   
                             ?>
                             <p>
