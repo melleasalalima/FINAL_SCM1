@@ -79,7 +79,7 @@
                             <?php
                                 $prod_qty = $row['num_stocks'];
                                 $prod_status = $row['p_status'];
-                                if($prod_qty <= '0' || $prod_status = 'inactive'){   
+                                if( $prod_qty <= '0' || $prod_status = "inactive" ){   
                             ?>
                             <p>
                             <input type="number" disabled name="cp_qty" min="1" max="<?php echo $row['num_stocks'];?>" value="1">
