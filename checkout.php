@@ -1,5 +1,7 @@
 <?php include('php/functions.php'); include('includes/header.php');
-$name = $email = $tel = $address = $city = $province = $postal = $country = $landmark = $payment = $delivery = $payment = $paymentimg ="";
+session_start();
+$name = $email = $tel = $address = $city = $province = $postal = $country = $landmark = $payment = $delivery = $payment = $deliverydate  ="";
+$paymentimg;
 
 if(isset($_POST['order_btn'])){
     $name = $_POST['o_name'];
@@ -13,7 +15,7 @@ if(isset($_POST['order_btn'])){
     $landmark = $_POST['o_landmark'];
     $delivery = $_POST['o_delivery'];
     $payment = $_POST['o_payment'];
-    $paymentimg = $_POST['o_paymentimg'];
+    $deliverydate = $_POST['o_deliverydate'];
 
 
     $cart_query = mysqli_query($con, "SELECT * FROM `cart`");
@@ -27,18 +29,36 @@ if(isset($_POST['order_btn'])){
     };
 
     $total_product = implode(', ',$product_name);
-    $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment, o_paymentimg, total_price, total_product)
-    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$paymentimg', '$price_total','$total_product')") or die('query failed');
-   
-//    if (mysqli_query($con, $sql) === TRUE) {
-//     echo "<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\"> Order has been placed, thank you for shopping!
-//     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
-//       <span aria-hidden=\"true\">&times;</span>
-//     </button></div>";
-//     } 
+    $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment,total_price, total_product, o_deliverydate )
+    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate' )") or die('query failed');
+    
+    if($cart_query && $sql){
+        echo '<script>$("#myModal").modal()</script>';
+        echo "
+        <div class='alert alert-success alert-dismissible fade show' role='alert'>
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                <span aria-hidden='true'>&times;</span>
+            </button>
+
+            <h3>Thank you for Shopping!</h3>
+            <p>
+            <span>".$total_product."</span><br>
+            <span class='total'><strong>Total Amount Paid:</strong> ₱".$price_total."</span>
+            </p>
+            <hr>
+            <p> <strong>Name:</strong> <span>".$name."</span> </p>
+            <p> <strong>Contact Number:</strong> <span>".$tel."</span> </p>
+            <p> <strong>Email Address:</strong> <span>".$email."</span> </p>
+            <p> <strong>Shipping Address:</strong> <span>".$address.", ".$city.", ".$province.", ".$country." - ".$postal."</span> </p>
+            <p> <strong>Mode of Payment:</strong> <span>".$payment."</span> </p>
+            <p> <strong>Expect your delivery by <strong> $deliverydate </strong> via $delivery </p>
+            <a href='home.php'> Go back to home </a> &nbsp; <a href='shop.php'><i class='fa-solid fa-cart-shopping'></i>Continue Shopping </a>
+        </div>
+      ";
+   }
 }
  ?>
- <form method="POST" action="">
+ <form method="POST" action="" >
     <div class="container">
     <span class="display-4">Personal Information</span><br>
         <div class="form-row p-3">
@@ -104,7 +124,7 @@ if(isset($_POST['order_btn'])){
             </div>
             <!-- COUNTRY -->
             <div class="form-group col-md-3">
-                <span>Country</span>c
+                <span>Country</span>
                 <select class="form-control" id="o_country" name="o_country">
                     <option value="Philippines">Philippines</option>
                     </select>
@@ -117,6 +137,12 @@ if(isset($_POST['order_btn'])){
         <hr>
         <span class="display-4">Delivery Method</span><br>
             <div class="form-row p-3">
+                <div class="form-group col-md-12">
+                    <p>To ensure the freshness of our product, we offer next-day delivery or pick up.</p>
+                    <span style='color:blue;font-weight:bold;'>Date Today: </span> <?php echo date('Y-m-d');?><br>
+                    <label>Choose a delivery date</label> 
+                    <input type="date"  class="form-control" name="o_deliverydate" value="<?php echo $order_date ;?>" min="<?php echo $order_date ;?>" max="<?php echo $maxorder_date ;?>">
+                </div>
                 <!-- LOCAL DELIVERY -->
                 <div class="form-group col-md-6">
                     <div class=" card shadow p-3" style="height: 8rem;">
@@ -147,13 +173,9 @@ if(isset($_POST['order_btn'])){
             <span class="display-4">Payment Option</span><br>
             <div class="form-row p-3">
                 <!-- UPLOAD FILE -->
-               <div class="form-group col-md-12">
-                  <!-- <div class="custom-file">
-                     <input type="file" class="custom-file-input" id="validatedCustomFile">
-                     <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                     <div class="invalid-feedback">Example invalid custom file feedback</div> 
-                  </div> -->
-               </div>
+                <div class="form-group col-md-12">
+                    <input type="file" name="file" id="o_paymentimg" class="custom-file">
+                </div>
                <!-- GCASH DIV -->
                <div class="form-group col-md-6">
                   <div class=" card shadow p-3" style="height: 30rem;">
@@ -193,4 +215,11 @@ if(isset($_POST['order_btn'])){
             <input type="hidden" placeholder="paymentimg" value="" name="o_paymentimg">
     </div>
 </form>
+<?php
+// Unset all of the session variables
+$_SESSION = array();
+ 
+// Destroy the session.
+session_destroy();
+ ?>
 <?php include('includes/footer.php'); ?>
