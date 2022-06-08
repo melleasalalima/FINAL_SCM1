@@ -94,7 +94,7 @@ if(isset($_POST['order_btn'])){
             <div class="form-group col-md-6">
                 <label>Contact Number</label>
                 <input type="tel" class="form-control" placeholder="Ex. 09XXXXXXXXX" maxlength="11" name="o_tel" required
-                onkeypress="return(event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
             </div>
         </div>
         <hr>
@@ -137,7 +137,8 @@ if(isset($_POST['order_btn'])){
             <!-- POSTAL CODE -->
             <div class="form-group col-md-3">
                     <span>Postal Code</span>
-                    <input type="text" class="form-control" placeholder="Enter your Postal Code" name="o_postal" required>
+                    <input type="text" class="form-control" placeholder="Enter your Postal Code" maxlength="4" 
+                    name="o_postal" required oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
             </div>
             <!-- COUNTRY -->
             <div class="form-group col-md-3">
@@ -191,7 +192,8 @@ if(isset($_POST['order_btn'])){
             <div class="form-row p-3">
                 <!-- UPLOAD FILE -->
                 <div class="form-group col-md-12">
-                    <input class="form-control" type="file" name="uploadfile" value="" />
+                    <p>Kindly upload your payment receipt here. You may select from our payment options below!</p>
+                    <input class="form-control" type="file" name="uploadfile" value="" required/>
                 </div>
                <!-- GCASH DIV -->
                <div class="form-group col-md-6">
@@ -200,11 +202,10 @@ if(isset($_POST['order_btn'])){
                      <ul>
                            <li>Account Name: Abegail Landicho</li>
                            <li>Account Number: 0927 605 9354</li>
-                           <img src="/assets/mop-qr/gcash-qr.jpg" width="150" height="150">
-                           <p>Please send copy of deposit slip to <a href="mailto:melleasalalima@gmail.com">fishnchix.ph@gmail.com</a> with Name and Order No.<br>
-                              DELIVERY SCHEDULE: NEXT DAY DELIVERY FOR VERIFIED PAYMENT before 2pm Cut-Off.<br>
-                              You may also call or text 0935-0014238 for any concern.
-                           </p>
+                           <img src="images/mop-qr/gcash-qr.jpg" width="200" height="200">
+                            <p>
+                            DELIVERY SCHEDULE: NEXT DAY DELIVERY FOR VERIFIED PAYMENT before 5pm Cut-Off.<br>
+                            You may also call or text +639276059354, you can also reach us through email at <a href="mailto:velenandannaseafoods.ph@gmail.com">velenandannaseafoods.ph@gmail.com</a> for any concern.</p>
                      </ul> 
                   </div>
                 </div>
@@ -217,10 +218,10 @@ if(isset($_POST['order_btn'])){
                         <li>Account Number: 4279241075</li>
                         <li>Bank: BPI savings</li>
                         <li>Mobile: 0927 605 9354</li>
-                        <img src="/assets/mop-qr/bpi-qr.jpg" width="150" height="150">
-                        <p>Please send copy of deposit slip to <a href="mailto:melleasalalima@gmail.com">velenandana.ph@gmail.com</a> with Name and Order No.<br>
-                        DELIVERY SCHEDULE: NEXT DAY DELIVERY FOR VERIFIED PAYMENT before 2pm Cut-Off.<br>
-                        You may also call or text 0935-0014238 for any concern.</p>
+                        <img src="images/mop-qr/bpi-qr.jpg" width="200" height="200">
+                        <p>
+                        DELIVERY SCHEDULE: NEXT DAY DELIVERY FOR VERIFIED PAYMENT before 5pm Cut-Off.<br>
+                        You may also call or text +639276059354, you can also reach us through email at <a href="mailto:velenandannaseafoods.ph@gmail.com">velenandannaseafoods.ph@gmail.com</a> for any concern.</p>
                     </ul> 
                   </div>
                   

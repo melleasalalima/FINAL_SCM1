@@ -53,7 +53,8 @@
 <!-- Contact Number -->
 		<div class="form-group col-md-6">
 		<label>Contact Number</label>
-			<input type="text" name="contact_num"  class="form-control" value="<?php echo $contact_num; ?>">
+			<input type="text" name="contact_num"  class="form-control" value="<?php echo $contact_num; ?>"
+			oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 		</div>
 
 <!-- User type -->
@@ -63,7 +64,7 @@
 <!-- password -->
 		<div class="form-group col-md-6">
 		<label>Password</label>
-			<input type="password"  class="form-control" name="password_1">
+			<input type="password"  class="form-control" name="password_1" minlength="8" maxlength="12">
 		</div>
 
 		<div class="form-group col-md-6">

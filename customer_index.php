@@ -1,21 +1,12 @@
-<?php include('functions.php'); ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<?php include('functions.php'); include('includes/header.php'); require_once "customer_process.php";
+  
+  if (!$_SESSION['user']['user_type'] == 'admin'||!$_SESSION['user']['user_type'] == 'staff' ||!$_SESSION['user']['user_type'] == 'customer') {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+?>
 
-    <meta username="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Product List</title>
-</head>
-<body>
-  <?php
-    require_once "customer_process.php";
-  ?>
+  
   <?php
     $result=$con->query("SELECT * FROM inventory")or die($con->error);
     /*$result=$con->query("SELECT * FROM records")or die($con->error);*/
@@ -53,8 +44,5 @@
   </table>
   </div>
 </div>
-<!-- Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-</body>
-</html>
+
+<?php include('includes/footer.php'); ?>
