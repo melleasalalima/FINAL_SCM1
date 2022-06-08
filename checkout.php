@@ -26,12 +26,12 @@ if(isset($_POST['order_btn'])){
     // Execute query
     mysqli_query($db, $sql);
  
-    // Now let's move the uploaded image into the folder: image
-    if (move_uploaded_file($tempname, $folder)) {
-        echo "<h3>  Image uploaded successfully!</h3>";
-    } else {
-        echo "<h3>  Failed to upload image!</h3>";
-    }
+    // // Now let's move the uploaded image into the folder: image
+    // if (move_uploaded_file($tempname, $folder)) {
+    //     echo "<h3>  Image uploaded successfully!</h3>";
+    // } else {
+    //     echo "<h3>  Failed to upload image!</h3>";
+    // }
 
     $cart_query = mysqli_query($con, "SELECT * FROM `cart`");
     $price_total = 0;
@@ -75,7 +75,7 @@ if(isset($_POST['order_btn'])){
    }
 }
  ?>
- 
+
  <form method="POST" action="" enctype="multipart/form-data">
     <div class="container">
     <span class="display-4">Personal Information</span><br>
