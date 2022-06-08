@@ -31,7 +31,7 @@ if (isset($_GET['logout'])) {
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="../assets/style.css">
     </head>
     <body>
     <header>
@@ -152,16 +152,16 @@ if (isset($_GET['logout'])) {
                         Useful links
                     </h6>
                     <p>
-                        <a href="shop.php" class="text-reset">Shop Now</a>
+                        <a href="../shop.php" class="text-reset">Shop Now</a>
                     </p>
                     <p>
-                        <a href="home.php" class="text-reset">Home</a>
+                        <a href="../home.php" class="text-reset">Home</a>
                     </p>
                     <p>
-                        <a href="about.php" class="text-reset">About</a>
+                        <a href="../about.php" class="text-reset">About</a>
                     </p>
                     <p>
-                        <a href="login.php" class="text-reset">Login / Sign Up</a>
+                        <a href="../login.php" class="text-reset">Login / Sign Up</a>
                     </p>
                     <!-- <p>
                         <a href="contact.php" class="text-reset">Contact Us</a>
@@ -179,13 +179,13 @@ if (isset($_GET['logout'])) {
                         Products
                     </h6>
                     <p>
-                        <a href="shop.php" class="text-reset">Shop Alll</a>
+                        <a href="../shop.php" class="text-reset">Shop Alll</a>
                     </p>
                     <p>
-                        <a href="shop-fish.php" class="text-reset">Fish</a>
+                        <a href="../shop-fish.php" class="text-reset">Fish</a>
                     </p>
                     <p>
-                        <a href="shop-squid.php" class="text-reset">Squid</a>
+                        <a href="../shop-squid.php" class="text-reset">Squid</a>
                     </p>
                     <!-- <p>
                         <a href="#!" class="text-reset">Tuna</a>
