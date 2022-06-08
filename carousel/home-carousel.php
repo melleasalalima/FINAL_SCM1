@@ -6,7 +6,7 @@
                 <img src="images/gallery/img1.jpg" width="100%" height="900px">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="align-items-center justify-content-center mb-5">
-                        <h1 class="animate__animated animate__bounce animate__infinite bg-info text-white">FRESH SEAFOOD STRAIGHT FROM THE SEA PORT</h1>
+                        <h1 class="animate__animated animate__bounce animate__infinite bg-info text-white shadow">FRESH SEAFOOD STRAIGHT FROM THE SEA PORT</h1>
                     </div>
                     <!-- <button class="animate__animated animate__bounce animate__infinite btn btn-success" href="index.php"> SHOP NOW </button> -->
                 </div>
@@ -16,7 +16,7 @@
                 <img src="images/gallery/img1.jpg" width="100%" height="900px">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="align-items-center justify-content-center mb-5">
-                        <h1 class="animate__animated animate__bounce animate__infinite bg-info text-white">FRESH SEAFOOD RIGHT OFF THE BOAT</h1>
+                        <h1 class="animate__animated animate__bounce animate__infinite bg-info text-white shadow">FRESH SEAFOOD RIGHT OFF THE BOAT</h1>
                     </div>
                     <!-- <button class="animate__animated animate__bounce animate__infinite btn btn-success" href="index.php"> SHOP NOW </button> -->
                 </div>
@@ -26,7 +26,7 @@
                 <img src="images/gallery/img1.jpg" width="100%" height="900px">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="align-items-center justify-content-center mb-5">
-                        <h1 class="animate__animated animate__bounce animate__infinite bg-info text-white">FRESH SEAFOOD RIGHT OFF THE BOAT</h1>
+                        <h1 class="animate__animated animate__bounce animate__infinite bg-info text-white shadow">FRESH SEAFOOD RIGHT OFF THE BOAT</h1>
                     </div>
                     <!-- <button class="animate__animated animate__bounce animate__infinite btn btn-success" href="index.php"> SHOP NOW </button> -->
                 </div>
