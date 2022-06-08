@@ -40,6 +40,9 @@
                     <p>
                         <a href="about.php" class="text-reset">About</a>
                     </p>
+                    <p>
+                        <a href="login.php" class="text-reset">Login / Sign Up</a>
+                    </p>
                     <!-- <p>
                         <a href="contact.php" class="text-reset">Contact Us</a>
                     </p> -->
