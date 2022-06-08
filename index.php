@@ -20,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="header">
+	<div class="container ">
 		<h2>Customer Account Profile</h2>
 	</div>
 	<div class="content">
