@@ -21,17 +21,11 @@ if(isset($_POST['order_btn'])){
     $folder = "./payment_uploads/" . $filename;
 
     // Get all the submitted data from the form
-    $sql = "INSERT INTO orders (o_paymentimg) VALUES ('$filename')";
+    // $sql = "INSERT INTO orders (o_paymentimg) VALUES ('$filename')";
  
     // Execute query
-    mysqli_query($db, $sql);
+    // mysqli_query($db, $sql);
  
-    // // Now let's move the uploaded image into the folder: image
-    if (move_uploaded_file($tempname, $folder)) {
-        echo "";
-    } else {
-        echo ".";
-    }
 
     $cart_query = mysqli_query($con, "SELECT * FROM `cart`");
     $price_total = 0;
@@ -40,12 +34,16 @@ if(isset($_POST['order_btn'])){
           $product_name[] = $product_item['cp_name'] .' ('. $product_item['cp_qty'] .') ';
           $product_price = ($product_item['cp_price'] * $product_item['cp_qty']);
           $price_total = $price_total + $product_price;
+        //   IF Local Delivery, 120
+          if ($delivery = $_POST['o_delivery'] == 'Local Delivery'){
+            $price_total = $price_total + 120;
+        }
        };
     };
 
     $total_product = implode(', ',$product_name);
-    $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment,total_price, total_product, o_deliverydate )
-    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate' )") or die('query failed');
+    $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment,total_price, total_product, o_deliverydate, o_paymentimg )
+    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate', '$filename')") or die('query failed');
     
     if($cart_query && $sql){
         echo "
@@ -72,7 +70,12 @@ if(isset($_POST['order_btn'])){
         </div>
     ";
    }
+   $filename = $_FILES["uploadfile"]["name"];
+   $tempname = $_FILES["uploadfile"]["tmp_name"];
+   $folder = "./payment_uploads/" . $filename;
+
 }
+
  ?>
 
  <form method="POST" action="" enctype="multipart/form-data">
