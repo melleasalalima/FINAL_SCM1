@@ -15,6 +15,7 @@ if(isset($_POST['order_btn'])){
     $delivery = $_POST['o_delivery'];
     $payment = $_POST['o_payment'];
     $deliverydate = $_POST['o_deliverydate'];
+    $status = $_POST['o_status'];
 
     $filename = $_FILES["uploadfile"]["name"];
     $tempname = $_FILES["uploadfile"]["tmp_name"];
@@ -42,8 +43,8 @@ if(isset($_POST['order_btn'])){
     };
 
     $total_product = implode(', ',$product_name);
-    $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment,total_price, total_product, o_deliverydate, o_paymentimg )
-    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate', '$filename')") or die('query failed');
+    $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment,total_price, total_product, o_deliverydate, o_paymentimg, o_status )
+    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate', '$filename', '$o_status')") or die('query failed');
     
     if($cart_query && $sql){
         echo "
@@ -233,7 +234,7 @@ if(isset($_POST['order_btn'])){
             <input type="submit" value="order now" name="order_btn" class="btn btn-success">
             <hr>
             <input type="hidden" placeholder="payment" value="" name="o_payment">
-            <input type="hidden" placeholder="paymentimg" value="" name="o_paymentimg">
+            <input type="hidden" placeholder="o_status" value="Pending" name="o_status">
     </div>
 </form>
 <?php
