@@ -23,7 +23,7 @@
 
   <!-- Search -->
   <nav class="navbar navbar-dark bg-light">
-    <h3><a href="admin/admin_index.php"><i class="fa fa-home">&nbsp;&nbsp;</i>Orders List</a></h3>
+    <h3><a href="../admin/admin_index.php"><i class="fa fa-home">&nbsp;&nbsp;</i>Orders List</a></h3>
     <form action="orders_list.php" method="post">
           <div class="form-group">
             <input type="text" placeholder="Search" name="search" value="<?php echo $search; ?>">
