@@ -67,6 +67,9 @@
   <table class="table">
     <thread>
       <tr>
+        <th>Delivery Date</th>
+        <th>Order Status</th>
+        <th>Proof of Payment</th>
         <th>Name</th>
         <th>Email</th>
         <th>Contact No.</th>
@@ -77,12 +80,11 @@
         <th>Country</th>
         <th>Landmark</th>
         <th>Payment</th>
-        <th>Proof of Payment</th>
+
         <th>Total Price</th>
         <th>Total Product</th>
         <th>Delivery</th>
-        <th>Delivery Date</th>
-        <th>Order Status</th>
+        
         <th colspan="13">Actions</th>
       </tr>
     </thread>
@@ -91,6 +93,9 @@
               while($row=$result->fetch_assoc()){?>
     <tr>
       <?php $rowcount=$rowcount+1; ?>
+        <td><?php echo $row['o_deliverydate'];?></td>
+        <td><?php echo $row['o_status'];?></td>
+        <td><img src="payment_uploads/<?php echo $row['o_paymentimg'];?>" width="100" height="100"></td>
         <td><?php echo $row['o_name'];?></td>
         <td><?php echo $row['o_email'];?></td>
         <td><?php echo $row['o_tel'];?></td>
@@ -101,12 +106,11 @@
         <td><?php echo $row['o_country'];?></td>
         <td><?php echo $row['o_landmark'];?></td>
         <td><?php echo $row['o_payment'];?></td>
-        <td><img src="payment_uploads/<?php echo $row['o_paymentimg'];?>" width="100" height="100"></td>
+        
         <td><?php echo $row['total_price'];?></td>
         <td><?php echo $row['total_product'];?></td>
         <td><?php echo $row['o_delivery'];?></td>
-        <td><?php echo $row['o_deliverydate'];?></td>
-        <td><?php echo $row['o_status'];?></td>
+        
         <td>
                 <a href="orders_list.php?edit=<?php echo $row['o_id'];?>" class="btn btn-info">Update Status</a>
             </td>
