@@ -75,6 +75,7 @@ if(isset($_POST['order_btn'])){
    }
 }
  ?>
+ 
  <form method="POST" action="" enctype="multipart/form-data">
     <div class="container">
     <span class="display-4">Personal Information</span><br>
