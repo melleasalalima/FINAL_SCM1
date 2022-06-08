@@ -27,7 +27,7 @@ if (isset($_GET['logout'])) {
 </head>
 <body>
 	<div class="card shadow mb-3 mt-3 p-3">
-	<div class="card shadow mb-3 mt-3 p-3">
+	<div class="title">
 		<h2>Staff Account Profile</h2>
 	</div>
 	<div class="content">
