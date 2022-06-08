@@ -74,7 +74,7 @@ function register(){
 					  VALUES('$username', '$email', '$user_type', '$password', '$fname', '$mname', '$lname', '$address', '$contact_num')";
 			mysqli_query($db, $query);
 			$_SESSION['success']  = "New user successfully created!!";
-			header('location: home.php');
+			header('location: admin_home.php');
 		}else{
 			$query = "INSERT INTO users (username, email, user_type, password, fname, mname, lname, address, contact_num) 
 					  VALUES('$username', '$email', '$user_type', '$password', '$fname', '$mname', '$lname', '$address', '$contact_num')";
@@ -168,16 +168,16 @@ function login(){
 			if ($logged_in_user['user_type'] == 'admin') {
 
 				$_SESSION['user'] = $logged_in_user;
-				$_SESSION['success']  = "You are now logged in";
+				$_SESSION['success']  = "<div class='alert alert-primary' role='alert'>You are now logged in</div>";
 				header('location: admin/admin_home.php');		  
 			}elseif ($logged_in_user['user_type'] == 'staff') {
 
 				$_SESSION['user'] = $logged_in_user;
-				$_SESSION['success']  = "You are now logged in";
+				$_SESSION['success']  = "<div class='alert alert-primary' role='alert'>You are now logged in</div>";
 				header('location: staff/staff.php');		  
 			}else{
 				$_SESSION['user'] = $logged_in_user;
-				$_SESSION['success']  = "You are now logged in";
+				$_SESSION['success']  = "<div class='alert alert-primary' role='alert'>You are now logged in</div>";
 
 				header('location: index.php');
 			}

@@ -1,5 +1,6 @@
 <?php 
 	include('../functions.php'); 
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,90 +25,98 @@
 	</style>
 </head>
 <body>
-	<div class="header">
-		<h2><a href="admin_home.php" style="color: white;">Admin - create user</a></h2>
-	</div>
-	
-	<form method="post" action="admin_create_user.php">
-
+<!-- SIGN UP -->
+<div class="container shadow p-3 mb-3 mt-3">
+	<h2><a href="admin_home.php" class="display-4">Admin - create user</a></h2>
 		<?php echo display_error(); ?>
 
-<!-- Username -->
 
-		<div class="input-group">
+	<form method="post" action="admin_create_user.php">
+	<div class="form-row">
+<!-- Username -->
+		<div class="form-group col-md-6">
 			<label>Username</label>
-			<input type="text" name="username" value="<?php echo $username; ?>">
+			<input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
 		</div>
+
+
+<!-- Email -->
+		<div class="form-group col-md-6">
+		<label>Email</label>
+			<input type="email" name="email"  class="form-control" value="<?php echo $email; ?>">
+		</div>
+
 
 <!-- First Name -->
-
-		<div class="input-group">
-			<label>First Name</label>
-			<input type="text" name="fname" value="<?php echo $fname; ?>">
+		<div class="form-group col-md-4">
+		<label>First Name</label>
+			<input type="text" name="fname" class="form-control" value="<?php echo $fname; ?>">
 		</div>
 
-<!-- Middle Name -->
 
-		<div class="input-group">
-			<label>Middle Name</label>
-			<input type="text" name="mname" placeholder="Optional" value="<?php echo $mname; ?>">
+<!-- Middle Name -->
+		<div class="form-group col-md-4">
+		<label>Middle Name</label>
+			<input type="text" name="mname" class="form-control" placeholder="Optional" value="<?php echo $mname; ?>">
 		</div>
 
 <!-- Last Name -->
-
-		<div class="input-group">
-			<label>Last Name</label>
-			<input type="text" name="lname" value="<?php echo $lname; ?>">
-		</div>
-
-<!-- Email -->
-
-		<div class="input-group">
-			<label>Email</label>
-			<input type="email" name="email" value="<?php echo $email; ?>">
+		<div class="form-group col-md-4">
+		<label>Last Name</label>
+			<input type="text" name="lname"  class="form-control"  value="<?php echo $lname; ?>">
 		</div>
 
 <!-- Address -->
-
-		<div class="input-group">
-			<label>Address</label>
-			<input type="text" name="address" value="<?php echo $address; ?>">
+		<div class="form-group col-md-4">
+		<label>Address</label>
+			<input type="text" name="address" class="form-control"  value="<?php echo $address; ?>">
 		</div>
 
 <!-- Contact Number -->
-
-		<div class="input-group">
-			<label>Contact Number</label>
-			<input type="text" name="contact_num" value="<?php echo $contact_num; ?>">
+		<div class="form-group col-md-4">
+		<label>Contact Number</label>
+			<input type="text" name="contact_num"  class="form-control" value="<?php echo $contact_num; ?>">
 		</div>
 
 <!-- User type -->
-
-		<div class="input-group">
-			<label>User type</label>
-			<select name="user_type" id="user_type" >
-				<option value=""></option>
+	<div class="form-group col-md-4">
+		<label>User type</label>
+			<select name="user_type" id="user_type" class="form-control" >
 				<option value="admin">Admin</option>
 				<option value="staff">Staff</option>
-				<option value="customer">Customer</option>
+				<option value="customer" active>Customer</option>
 			</select>
 		</div>
 
-
-
 <!-- password -->
-		<div class="input-group">
-			<label>Password</label>
-			<input type="password" name="password_1">
+		<div class="form-group col-md-6">
+		<label>Password</label>
+			<input type="password"  class="form-control" name="password_1">
 		</div>
-		<div class="input-group">
-			<label>Confirm password</label>
-			<input type="password" name="password_2">
+
+		<div class="form-group col-md-6">
+		<label>Confirm password</label>
+			<input type="password"  class="form-control" name="password_2">
 		</div>
-		<div class="input-group">
-            	<button type="submit" class="btn" name="register_btn"> + Create user</button>
+
+		<div class="form-group">
+            	<button type="submit" class="btn btn-info mb-2" name="register_btn"> + Create user</button>
 		</div>
+	</div>
 	</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
 	<!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
