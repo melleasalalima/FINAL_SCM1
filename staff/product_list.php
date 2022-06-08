@@ -50,7 +50,7 @@
 
   <!-- Input -->
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <h2 class="text-center">Add Record</h2>
         <hr>
 
@@ -75,7 +75,7 @@
   </div>
   <!-- End of Input -->
   <!-- TABLE -->
-  <div class="col-md-9">
+  <div class="col-md-10">
     <h2 class="text-center">Product List</h2>
       <hr>
   <div class="row justify-content-center">
