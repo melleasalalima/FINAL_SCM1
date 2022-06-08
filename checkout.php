@@ -37,14 +37,14 @@ if(isset($_POST['order_btn'])){
           $price_total = $price_total + $product_price;
         //   IF Local Delivery, 120
           if ($delivery = $_POST['o_delivery'] == 'Local Delivery'){
-            $price_total = $price_total + 120;
+            $price_total = $price_total + 220;
         }
        };
     };
 
     $total_product = implode(', ',$product_name);
     $sql =  mysqli_query($con, " INSERT IGNORE orders (o_name, o_email, o_tel, o_address, o_city, o_province, o_postal, o_country, o_landmark, o_delivery, o_payment,total_price, total_product, o_deliverydate, o_paymentimg, o_status )
-    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate', '$filename', '$o_status')") or die('query failed');
+    VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate', '$filename', '$status')") or die('query failed');
     
     if($cart_query && $sql){
         echo "
