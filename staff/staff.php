@@ -38,8 +38,6 @@ if (isset($_GET['logout'])) {
     <header>
     <?php
       
-      $select_rows = mysqli_query($con, "SELECT * FROM `cart`") or die('query failed');
-      $row_count = mysqli_num_rows($select_rows);
 
       ?>
         <nav class="navbar navbar-expand-lg navbar-light bg-info p-4 sticky-top">
@@ -61,7 +59,7 @@ if (isset($_GET['logout'])) {
                         <a class="nav-link" href="shop.php">Shop Now</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
+                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a>
                     </li>
                 </ul>
                 <!-- <form class="form-inline my-2 my-lg-0">
