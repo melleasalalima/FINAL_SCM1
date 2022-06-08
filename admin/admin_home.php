@@ -1,5 +1,5 @@
 <?php 
-include('../functions.php'); require_once('../php/functions.php'); include('includes/header.php'); 
+include('../functions.php'); require_once('../php/functions.php'); include('../includes/header.php'); 
  
 if (!isAdmin()) {
 	$_SESSION['msg'] = "You must log in first";
@@ -96,7 +96,7 @@ if (isset($_GET['logout'])) {
 	</div>
 	
 </div>
-<?php include('includes/footer.php'); ?>
+<?php include('../includes/footer.php'); ?>
 
 
 
