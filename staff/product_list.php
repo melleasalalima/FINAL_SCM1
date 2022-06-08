@@ -106,7 +106,7 @@
         <td><?php echo $row['p_status'];?></td>
         <td>
                 <a href="product_list.php?edit=<?php echo $row['id'];?>" class="btn btn-primary">Edit</a>
-                <a href="staff_process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
+
             </td>
       </tr>
         <?php } ?>
