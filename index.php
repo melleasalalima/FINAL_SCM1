@@ -20,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="container ">
+	<div class="container">
 		<h2>Customer Account Profile</h2>
 	</div>
 	<div class="content">
@@ -37,7 +37,7 @@
 		<?php endif ?>
 		<!-- logged in user information -->
 		<div class="profile_info">
-			<img src="user.png"  >
+			<img src="user.png">
 
 			<div>
 				<?php  if (isset($_SESSION['user'])) : ?>
