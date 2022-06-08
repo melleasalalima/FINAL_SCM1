@@ -26,7 +26,8 @@ if (isset($_GET['logout'])) {
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-	<div class="header">
+	<div class="card shadow mb-3 mt-3 p-3">
+	<div class="card shadow mb-3 mt-3 p-3">
 		<h2>Staff Account Profile</h2>
 	</div>
 	<div class="content">
@@ -65,6 +66,7 @@ if (isset($_GET['logout'])) {
 				<?php endif ?>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
