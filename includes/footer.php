@@ -59,20 +59,20 @@
                         Products
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Fish</a>
+                        <a href="shop.php" class="text-reset">Shop Alll</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Squid</a>
+                        <a href="shop-fish.php" class="text-reset">Fish</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Salmon</a>
+                        <a href="shop-squid.php" class="text-reset">Squid</a>
                     </p>
-                    <p>
+                    <!-- <p>
                         <a href="#!" class="text-reset">Tuna</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Crab & Shrimp</a>
-                    </p>
+                    </p> -->
                 </div>
 
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
