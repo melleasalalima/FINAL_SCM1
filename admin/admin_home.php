@@ -76,7 +76,7 @@ if (isset($_GET['logout'])) {
 	<!-- Start ADMIN HOMEPAGE -->
 <div class="container">
 
-	<div class="card shadow p-3 mb-3">
+	<div class="card shadow p-3 mb-5">
 	<div class="header">
 		<h2>Admin - Home Page</h2>
 	</div>
