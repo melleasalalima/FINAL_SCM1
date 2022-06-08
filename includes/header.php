@@ -1,8 +1,4 @@
-<?php
-    require_once('php/item-card.php');
-    require_once('php/functions.php');
-
-?>
+<?php require_once('php/functions.php');?>
 <!DOCTYPE html>
 <html>
     <head>
