@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="card p-3">
 		<form method="post" action="login.php">
-		<h2><a href="login.php">Account Login</a></h2>
+		<h2><a href="login.php" class="display-4">Account Login</a></h2>
 		<?php echo display_error(); ?>
 			<div class="form-row">
 				<div class="form-group col-md-4">

@@ -48,7 +48,6 @@ if(isset($_POST['order_btn'])){
     VALUES ('$name', '$email', '$tel', '$address', '$city', '$province', '$postal', '$country', '$landmark', '$delivery', '$payment', '$price_total','$total_product', '$deliverydate' )") or die('query failed');
     
     if($cart_query && $sql){
-        echo '<script>$("#myModal").modal()</script>';
         echo "
         <div class='alert alert-success alert-dismissible fade show' role='alert'>
             <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
@@ -71,7 +70,7 @@ if(isset($_POST['order_btn'])){
             <p> <strong>Expect your delivery by <strong> $deliverydate </strong> via $delivery </p>
             <a href='home.php'> Go back to home </a> &nbsp; <a href='shop.php'><i class='fa-solid fa-cart-shopping'></i>Continue Shopping </a>
         </div>
-      ";
+    ";
    }
 }
  ?>
