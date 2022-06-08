@@ -109,7 +109,9 @@ if (isset($_GET['logout'])) {
 						<br>
 						<a href="../index.php?logout='1'" style="color: red;">logout</a>
 						&nbsp; <a href="product_list.php" style="color: orange;">Product List</a>
+						&nbsp; <a href="../orders_list.php" style="color: orange;">See Orders</a>
 					</small>
+
 
 				<?php endif ?>
 			</div>
