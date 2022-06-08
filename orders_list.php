@@ -18,6 +18,9 @@
              OR o_deliverydate LIKE '%$search%' OR o_status LIKE '%$search%'") or die ($con->error());
         }
   ?>
+  <div class="container-fluid">
+
+
   <!-- Search -->
   <nav class="navbar navbar-dark bg-light">
     <h3><a href="orders_list.php"><i class="fa fa-home">&nbsp;&nbsp;</i>Orders List</a></h3>
@@ -74,7 +77,7 @@
         <th>Country</th>
         <th>Landmark</th>
         <th>Payment</th>
-        <th>Paymenting</th>
+        <th>Proof of Payment</th>
         <th>Total Price</th>
         <th>Total Product</th>
         <th>Delivery</th>
@@ -98,7 +101,7 @@
         <td><?php echo $row['o_country'];?></td>
         <td><?php echo $row['o_landmark'];?></td>
         <td><?php echo $row['o_payment'];?></td>
-        <td><?php echo $row['o_paymentimg'];?></td>
+        <td><img src="payment_uploads/<?php echo $row['o_paymentimg'];?>" width="100" height="100"></td>
         <td><?php echo $row['total_price'];?></td>
         <td><?php echo $row['total_product'];?></td>
         <td><?php echo $row['o_delivery'];?></td>
@@ -113,5 +116,5 @@
             <h1>SORRY NO RESULT!</h1>
         <?php } ?>
   </table>
-
+  </div>
   <?php include('includes/footer.php'); ?>

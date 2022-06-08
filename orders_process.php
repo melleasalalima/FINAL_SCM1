@@ -2,7 +2,7 @@
 $o_status=$search="";
 $o_id=$rowcount=0;
 $update=false;
-$con=new mysqli('localhost','root','','scm') or die (mysqli_error($mysqli));
+$con=new mysqli('localhost', 'u579272454_velen', 'Mamamopink123', 'u579272454_scm') or die (mysqli_error($mysqli));
 /*if($con->connect_error){
 	echo "<p>Connection Failed</p>".$con->connect_error;
 }else{
