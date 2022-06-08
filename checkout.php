@@ -1,7 +1,6 @@
 <?php include('php/functions.php'); include('includes/header.php');
 session_start();
 $name = $email = $tel = $address = $city = $province = $postal = $country = $landmark = $payment = $delivery = $payment = $deliverydate  ="";
-$paymentimg;
 
 if(isset($_POST['order_btn'])){
     $name = $_POST['o_name'];
@@ -17,6 +16,22 @@ if(isset($_POST['order_btn'])){
     $payment = $_POST['o_payment'];
     $deliverydate = $_POST['o_deliverydate'];
 
+    $filename = $_FILES["uploadfile"]["name"];
+    $tempname = $_FILES["uploadfile"]["tmp_name"];
+    $folder = "./payment_uploads/" . $filename;
+
+    // Get all the submitted data from the form
+    $sql = "INSERT INTO orders (o_paymentimg) VALUES ('$filename')";
+ 
+    // Execute query
+    mysqli_query($db, $sql);
+ 
+    // Now let's move the uploaded image into the folder: image
+    if (move_uploaded_file($tempname, $folder)) {
+        echo "<h3>  Image uploaded successfully!</h3>";
+    } else {
+        echo "<h3>  Failed to upload image!</h3>";
+    }
 
     $cart_query = mysqli_query($con, "SELECT * FROM `cart`");
     $price_total = 0;
@@ -46,11 +61,13 @@ if(isset($_POST['order_btn'])){
             <span class='total'><strong>Total Amount Paid:</strong> ₱".$price_total."</span>
             </p>
             <hr>
+            <p> <strong>Proof of Payment:</strong><br>
+            <span><img src='payment_uploads/".$filename."' witdth='90' height='90'> </span> </p>
             <p> <strong>Name:</strong> <span>".$name."</span> </p>
             <p> <strong>Contact Number:</strong> <span>".$tel."</span> </p>
             <p> <strong>Email Address:</strong> <span>".$email."</span> </p>
             <p> <strong>Shipping Address:</strong> <span>".$address.", ".$city.", ".$province.", ".$country." - ".$postal."</span> </p>
-            <p> <strong>Mode of Payment:</strong> <span>".$payment."</span> </p>
+            <p> <strong>Payment Method: <strong> $payment</p>
             <p> <strong>Expect your delivery by <strong> $deliverydate </strong> via $delivery </p>
             <a href='home.php'> Go back to home </a> &nbsp; <a href='shop.php'><i class='fa-solid fa-cart-shopping'></i>Continue Shopping </a>
         </div>
@@ -58,7 +75,7 @@ if(isset($_POST['order_btn'])){
    }
 }
  ?>
- <form method="POST" action="" >
+ <form method="POST" action="" enctype="multipart/form-data">
     <div class="container">
     <span class="display-4">Personal Information</span><br>
         <div class="form-row p-3">
@@ -174,7 +191,7 @@ if(isset($_POST['order_btn'])){
             <div class="form-row p-3">
                 <!-- UPLOAD FILE -->
                 <div class="form-group col-md-12">
-                    <input type="file" name="file" id="o_paymentimg" class="custom-file">
+                    <input class="form-control" type="file" name="uploadfile" value="" />
                 </div>
                <!-- GCASH DIV -->
                <div class="form-group col-md-6">
