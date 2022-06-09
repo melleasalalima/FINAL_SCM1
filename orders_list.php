@@ -23,7 +23,15 @@
 
   <!-- Search -->
   <nav class="navbar navbar-dark bg-light">
-    <h3><a href="../admin/admin_home.php"><i class="fa fa-home">&nbsp;&nbsp;</i>Orders List</a></h3>
+
+  <?php 
+    if ($_SESSION['user']['user_type'] == 'admin') {
+        echo "<h3><a href='../admin/admin_home.php'><i class='fa fa-home'>&nbsp;&nbsp;</i>Orders List</a></h3>";
+    }else if ($_SESSION['user']['user_type'] == 'staff') {
+      echo "<h3><a href='../staff/staff.php'><i class='fa fa-home'>&nbsp;&nbsp;</i>Orders List</a></h3>";
+    }
+  ?>
+    <!-- <h3><a href="../admin/admin_home.php"><i class="fa fa-home">&nbsp;&nbsp;</i>Orders List</a></h3> -->
     <form action="orders_list.php" method="post">
           <div class="form-group">
             <input type="text" placeholder="Search" name="search" value="<?php echo $search; ?>">
