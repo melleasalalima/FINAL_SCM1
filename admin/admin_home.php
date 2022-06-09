@@ -54,13 +54,13 @@ if (isset($_GET['logout'])) {
                         <a class="nav-link" href="#">Cart</span></a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="home.php"><i class="fa fa-home"></i></a>
+                        <a class="nav-link" href="../home.php"><i class="fa fa-home"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.php">Shop Now</a>
+                        <a class="nav-link" href="../shop.php">Shop Now</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
+                        <a class="nav-link" href="../cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
                     </li>
                 </ul>
                 <!-- <form class="form-inline my-2 my-lg-0">
@@ -167,7 +167,7 @@ if (isset($_GET['logout'])) {
                         <a href="contact.php" class="text-reset">Contact Us</a>
                     </p> -->
                     <p>
-                        <a href="faqs.php" class="text-reset">FAQs</a>
+                        <a href="../faqs.php" class="text-reset">FAQs</a>
                     </p>
                     <!-- <p>
                         <a href="tracking.php" class="text-reset">Track Orders</a>
