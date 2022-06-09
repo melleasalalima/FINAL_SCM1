@@ -75,8 +75,9 @@
                                 </h5>
                             </div>
                             <div class="col-md-3 py-5">
+                            <!-- echo $result['cp_qty']; -->
                                 <div>
-                                    <input type="number" min="1" max="<?php mysqli_query($con, "SELECT inventory.num_stocks FROM cart, inventory WHERE cart.cp_id = inventory.id;") or die('query failed');?>" name="update_quantity" value="<?php echo $result['cp_qty']; ?>" class="form-control w-50 d-inline"> Kilo/s <br>
+                                    <input type="number" min="1" max="" name="update_quantity" value="<?php $inv_qty ?>" class="form-control w-50 d-inline"> Kilo/s <br>
                                     <a href="cart.php?remove=<?php echo $result['c_id']; ?>" onclick="return confirm('remove item from cart?')" class="delete-btn p-2 mt-4 mb-4"> <i class="fas fa-trash"></i> remove</a>
                                     <input type="submit" value="Update Cart" class="btn btn-info center" name="update_update_btn">
                                 </div>  
