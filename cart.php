@@ -3,6 +3,9 @@
     require_once('php/functions.php');
     include ('includes/header.php');
 
+
+    $inv_qty = mysqli_query($con, "SELECT inventory.num_stocks FROM cart, inventory
+    WHERE cart.cp_id = inventory.id;") or die('query failed');
     $select_rows = mysqli_query($con, "SELECT * FROM `cart`") or die('query failed');
     $row_count = mysqli_num_rows($select_rows);
 
@@ -73,7 +76,7 @@
                             </div>
                             <div class="col-md-3 py-5">
                                 <div>
-                                    <input type="number" min="1" max="10" name="update_quantity" value="<?php echo $result['cp_qty']; ?>" class="form-control w-50 d-inline"> Kilo/s <br>
+                                    <input type="number" min="1" max="<?php $inv_qty ?>" name="update_quantity" value="<?php echo $result['cp_qty']; ?>" class="form-control w-50 d-inline"> Kilo/s <br>
                                     <a href="cart.php?remove=<?php echo $result['c_id']; ?>" onclick="return confirm('remove item from cart?')" class="delete-btn p-2 mt-4 mb-4"> <i class="fas fa-trash"></i> remove</a>
                                     <input type="submit" value="Update Cart" class="btn btn-info center" name="update_update_btn">
                                 </div>  
