@@ -40,7 +40,7 @@
     ?>
     <div class="container">
     <span class="display-4 p-3"><i class="fa fa-shopping-cart"></i> Shop All Items </span>
-    <hr><br>
+    <hr>
     <!-- HREF FOR CATEGORIES -->
     <ul class="list-group list-group-horizontal-sm">
         <li class="list-group-item mx-6 active"><a href="shop.php" class="text-light"> Shop All </a></li>
