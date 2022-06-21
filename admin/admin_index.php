@@ -97,8 +97,8 @@
         <div class="form-group col-md-6">
             <label>Password</label>
               <input type="password"  class="form-control" name="password" required>
-            </div>
-            <div class="form-group col-md-6">
+            </div><br>
+            <div>
             <button type="submit" name="update" class="btn btn-warning">Update</button>
             </div>
     <?php } ?>
