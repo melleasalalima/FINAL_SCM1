@@ -42,9 +42,9 @@
     <h1><i class="fa fa-shopping-cart"></i> Shop All Items </h1><br>
     <!-- HREF FOR CATEGORIES -->
     <ul class="list-group list-group-horizontal-sm">
-        <li class="list-group-item mx-6 active"><a href="shop.php" class="link-light"> Shop All </a></li>
-        <li class="list-group-item mx-6"><a href="shop-squid.php" class="link-info"> Shop Squid </a></li>
-        <li class="list-group-item mx-6"><a href="shop-fish.php" class="link-info"> Shop Fish </a></li>
+        <li class="list-group-item mx-6 active"><a href="shop.php" class="text-light"> Shop All </a></li>
+        <li class="list-group-item mx-6"><a href="shop-squid.php" class="text-info"> Shop Squid </a></li>
+        <li class="list-group-item mx-6"><a href="shop-fish.php" class="text-info"> Shop Fish </a></li>
     </ul>
         <div class="row text-center py-5">
             <?php
