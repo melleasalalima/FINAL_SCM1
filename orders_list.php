@@ -90,7 +90,7 @@
         <th>Landmark</th>
         <!-- <th>Payment</th> -->
 
-        <th colspan="2">Total Price</th>
+        <th>Total Price</th>
         <th>Total Product</th>
         <th>Delivery</th>
         
