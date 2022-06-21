@@ -98,11 +98,12 @@
             <label>Password</label>
               <input type="password"  class="form-control" name="password" required>
             </div><br>
+            </div>
             <div>
             <button type="submit" name="update" class="btn btn-warning">Update</button>
             </div>
     <?php } ?>
-      </div></div>
+      </div>
   </form><br>
   </div>
   <!-- End of Input -->
