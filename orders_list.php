@@ -20,7 +20,6 @@
   ?>
   <div class="container-fluid">
 
-  <div class="container overflow-auto">
   <!-- Search -->
   <nav class="navbar navbar-dark bg-light">
 
@@ -73,7 +72,7 @@
   </div><br>
     <!-- End of SESSION -->
   <!-- TABLE -->
-
+  <div class="container overflow-auto">
   <table class="table">
     <thread>
       <tr>
