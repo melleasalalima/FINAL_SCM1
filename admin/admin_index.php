@@ -109,9 +109,9 @@
         <td><?php echo $row['address'];?></td>
         <td><?php echo $row['contact_num'];?></td>
         <td>
-                <a href="admin_index.php?edit=<?php echo $row['id'];?>" class="btn btn-primary">Edit</a>
-                <a href="admin_process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger">Delete</a>
-            </td>
+          <a href="admin_index.php?edit=<?php echo $row['id'];?>" class="btn btn-warning btn-sm">Edit</a>
+          <a href="admin_process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger btn-sm">Delete</a>
+        </td>
       </tr>
         <?php } ?>
         <?php }else{ ?>
