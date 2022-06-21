@@ -38,7 +38,7 @@
   </nav><br>
   <!-- End Search -->
 
-<div class="container">
+<div class="container-fluid">
 
 
 
