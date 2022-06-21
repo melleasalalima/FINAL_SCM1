@@ -36,36 +36,70 @@
   </nav><br>
   <!-- End Search -->
   <!-- Input -->
-  <div class="row justify-content-center">
+  <div class="container shadow p-3 mb-3 mt-3">
   <form action="admin_process.php" method="post">
     <?php if($update==true){?>
       <input type="hidden" name="id" value="<?php echo $id; ?>">
-      <label>Username: </label>&nbsp;&nbsp;&nbsp;
-      <input type="text" name="username" required value="<?php echo $username; ?>"><br>
-      <label>Email: </label>&nbsp;&nbsp;&nbsp;
-      <input type="email" name="email" required value="<?php echo $email; ?>"><br>
-      <label>User Type: </label>&nbsp;&nbsp;&nbsp;
-      <select name="user_type" required>
-        <option value="<?php echo $user_type; ?>"><?php echo $user_type; ?></option>
-        <option value="admin">Admin</option>
-        <option value="staff">Staff</option>
-        <option value="customer">Customer</option>
-      </select><br>
-      <label>First Name: </label>&nbsp;&nbsp;&nbsp;
-      <input type="text" name="fname" required value="<?php echo $fname; ?>"><br>
-      <label>Middle Name: </label>&nbsp;&nbsp;&nbsp;
-      <input type="text" name="mname" value="<?php echo $mname; ?>"><br>
-      <label>Last Name: </label>&nbsp;&nbsp;&nbsp;
-      <input type="text" name="lname" required value="<?php echo $lname; ?>"><br>
-      <label>Address: </label>&nbsp;&nbsp;&nbsp;
-      <input type="text" name="address" required value="<?php echo $address; ?>"><br>
-      <label>Contact Number: </label>&nbsp;&nbsp;&nbsp;
-      <input type="text" name="contact_num" required value="<?php echo $contact_num; ?>"><br>
-      <br>
-      <label>Password: </label>&nbsp;&nbsp;&nbsp;<input type="password" name="password" required><br>
+      <div class="form-row">
+      <!-- Username -->
+      <div class="form-group col-md-6">
+        <label>Username</label>
+        <input type="text" name="username"class="form-control" required value="<?php echo $username; ?>">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group col-md-6">
+      <label>Email</label>
+        <input type="email" name="email" required class="form-control" value="<?php echo $email; ?>">
+      </div>
+
+      <!-- User type -->
+      <div class="form-group col-md-4">
+        <label>User type</label>
+          <select name="user_type" id="user_type" class="form-control" required>
+            <option value="<?php echo $user_type; ?>"><?php echo $user_type; ?></option>
+            <option value="admin">Admin</option>
+            <option value="staff">Staff</option>
+            <option value="customer">Customer</option>
+          </select>
+        </div>
+      <!-- First Name -->
+      <div class="form-group col-md-4">
+          <label>First Name</label>
+            <input type="text" name="fname" required class="form-control" value="<?php echo $fname; ?>">
+        </div>
+        <!-- Middle Name -->
+        <div class="form-group col-md-4">
+            <label>Middle Name</label>
+              <input type="text" name="mname" class="form-control" placeholder="Optional" value="<?php echo $mname; ?>">
+            </div>
+
+        <!-- Last Name -->
+            <div class="form-group col-md-4">
+            <label>Last Name</label>
+              <input type="text" name="lname"  required class="form-control"  value="<?php echo $lname; ?>">
+            </div>
+
+          <!-- Address -->
+          <div class="form-group col-md-4">
+              <label>Address</label>
+                <input type="text" name="address" required class="form-control"  value="<?php echo $address; ?>">
+              </div>
+    
+          <!-- Contact Number -->
+          <div class="form-group col-md-4">
+          <label>Contact Number</label>
+            <input type="text" name="contact_num" required class="form-control" value="<?php echo $contact_num; ?>">
+          </div>
+
+        <!-- password -->
+        <div class="form-group col-md-6">
+            <label>Password</label>
+              <input type="password"  class="form-control" name="password" required>
+            </div>
       <button type="submit" name="update" class="btn btn-warning">Update</button>
     <?php } ?>
-      </div>
+      </div></div>
   </form><br>
   </div>
   <!-- End of Input -->
