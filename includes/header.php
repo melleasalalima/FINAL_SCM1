@@ -44,10 +44,10 @@
                         <a class="nav-link" href="home.php"><i class="fa fa-home"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.php">Shop Now</a>
+                        <a class="nav-link" href="shop.php"><i class="fa fa-fishing-rod"></i> Shop Now</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.php"><i class="fa fa-user"></i>My Account</a>
+                        <a class="nav-link" href="shop.php"><i class="fa fa-user"></i> My Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
