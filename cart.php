@@ -54,7 +54,7 @@
                 <!-- cart.php?action=remove&id=$productid -->
                 <form action="" method="post" class="cart-items">
                     <input type="hidden" name="update_quantity_id" value="<?php echo $result['c_id']; ?>" >
-                    <?php echo $result['c_id']; ?>
+
                     <div class="border rounded shadow mb-3">
                         <div class="row bg-white">
                             <div class="col-md-3 pl-0">
