@@ -116,7 +116,7 @@
         <td><?php echo $row['o_landmark'];?></td>
     
         
-        <td><?php echo number_format($row['total_price'];)?></td>
+        <td><?php echo number_format($row['total_price']);?></td>
         <td><?php echo $row['total_product'];?></td>
         <td><?php echo $row['o_delivery'];?></td>
         
