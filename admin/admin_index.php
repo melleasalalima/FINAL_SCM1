@@ -100,15 +100,6 @@
           <label>Password</label>
             <input type="password"  class="form-control" name="password_1">
           </div>
-
-          <div class="form-group col-md-6">
-          <label>Confirm password</label>
-            <input type="password"  class="form-control" name="password_2">
-          </div>
-
-          <div class="form-group">
-                    <button type="submit" class="btn btn-info mb-2" name="register_btn"> + Create user</button>
-          </div>
         </div>
         </form>
         <button type="submit" name="update" class="btn btn-warning">Update</button>
