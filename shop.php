@@ -41,9 +41,9 @@
     <div class="container">
     <h1><i class="fa fa-shopping-cart"></i> Shop All Items </h1><br>
     <!-- HREF FOR CATEGORIES -->
-    <ul>
-        <li class="mx-6"><a href="shop.php"> Shop All </a></li>
-        <li class="mx-6"><a href="shop-squid.php" class="mx-6"> Shop Squid </a></li>
+    <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item mx-6"><a href="shop.php"> Shop All </a></li>
+        <li class="list-group-item mx-6"><a href="shop-squid.php" class="mx-6"> Shop Squid </a></li>
     </ul>
     
     
