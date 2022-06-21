@@ -54,18 +54,6 @@
             <input type="email" name="email"  class="form-control" value="<?php echo $email; ?>">
           </div>
 
-      <!-- User Type -->
-          <div class="form-group col-md-6">
-          <label>User Type: </label>
-          <select name="user_type" required>
-            <option value="<?php echo $user_type; ?>"><?php echo $user_type; ?></option>
-            <option value="admin">Admin</option>
-            <option value="staff">Staff</option>
-            <option value="customer">Customer</option>
-          </select><br>
-          </div>
-
-
       <!-- First Name -->
           <div class="form-group col-md-4">
           <label>First Name</label>
@@ -123,21 +111,10 @@
           </div>
         </div>
         </form>
-
+        <button type="submit" name="update" class="btn btn-warning">Update</button>
       </div>
 
-      
-      
-      <label>Email: </label>&nbsp;&nbsp;&nbsp;<input type="email" name="email" required value="<?php echo $email; ?>"><br>
 
-      <label>First Name: </label>&nbsp;&nbsp;&nbsp;<input type="text" name="fname" required value="<?php echo $fname; ?>"><br>
-      <label>Middle Name: </label>&nbsp;&nbsp;&nbsp;<input type="text" name="mname" value="<?php echo $mname; ?>"><br>
-      <label>Last Name: </label>&nbsp;&nbsp;&nbsp;<input type="text" name="lname" required value="<?php echo $lname; ?>"><br>
-      <label>Address: </label>&nbsp;&nbsp;&nbsp;<input type="text" name="address" required value="<?php echo $address; ?>"><br>
-      <label>Contact Number: </label>&nbsp;&nbsp;&nbsp;<input type="text" name="contact_num" required value="<?php echo $contact_num; ?>"><br>
-      <br>
-      <label>Password: </label>&nbsp;&nbsp;&nbsp;<input type="password" name="password" required><br>
-      <button type="submit" name="update" class="btn btn-warning">Update</button>
     <?php } ?>
       </div>
   </form><br>
