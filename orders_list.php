@@ -88,7 +88,7 @@
         <th>Postal Code</th>
         <th>Country</th>
         <th>Landmark</th>
-        <th>Payment</th>
+        <!-- <th>Payment</th> -->
 
         <th>Total Price</th>
         <th>Total Product</th>
@@ -114,7 +114,7 @@
         <td><?php echo $row['o_postal'];?></td>
         <td><?php echo $row['o_country'];?></td>
         <td><?php echo $row['o_landmark'];?></td>
-        <td><?php echo $row['o_payment'];?></td>
+    
         
         <td><?php echo $row['total_price'];?></td>
         <td><?php echo $row['total_product'];?></td>
