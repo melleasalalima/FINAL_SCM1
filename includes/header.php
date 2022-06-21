@@ -48,7 +48,7 @@
                         <a class="nav-link" href="shop.php"><i class="fa fa-fish"> ALL PRODUCTS </i></a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="shop.php"><i class="fa fa-user"> MY ACCOUNT </i></a>
+                        <a class="nav-link" href="login.php"><i class="fa fa-user"> MY ACCOUNT </i></a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"> CART </i><span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
