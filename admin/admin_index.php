@@ -131,12 +131,12 @@
         <th>Username</th>
         <th>Email</th>
         <th>User Type</th>
-        <th>Password</th>
         <th>First Name</th>
         <th>Middle Name</th>
         <th>Last Name</th>
         <th>Address</th>
         <th>Contact Number</th>
+        <th>Password</th>
         <th colspan="2">Actions</th>
       </tr>
     </thread>
@@ -148,12 +148,12 @@
         <td><?php echo $row['username'];?></td>
         <td><?php echo $row['email'];?></td>
         <td><?php echo $row['user_type'];?></td>
-        <td><?php echo $row['password'];?></td>
         <td><?php echo $row['fname'];?></td>
         <td><?php echo $row['mname'];?></td>
         <td><?php echo $row['lname'];?></td>
         <td><?php echo $row['address'];?></td>
         <td><?php echo $row['contact_num'];?></td>
+        <td><?php echo $row['password'];?></td>
         <td class="text-center">
           <a href="admin_index.php?edit=<?php echo $row['id'];?>" class="btn btn-warning btn-sm mb-3">Edit</a><br>
           <a href="admin_process.php?delete=<?php echo $row['id'];?>" class="btn btn-danger btn-sm mb-3">Delete</a>
