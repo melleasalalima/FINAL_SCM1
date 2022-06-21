@@ -110,9 +110,10 @@
                     </div>
                 </form>
             </div> 
-        </div> 
+                
             <?php } ?>
             <?php }else{ ?>
             <h1>SORRY NO RESULT!</h1>
             <?php } ?>
+            </div>
 <?php include('includes/footer.php');?>
