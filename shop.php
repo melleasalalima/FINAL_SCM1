@@ -41,8 +41,12 @@
     <div class="container">
     <h1><i class="fa fa-shopping-cart"></i> Shop All Items </h1><br>
     <!-- HREF FOR CATEGORIES -->
-    <a href="shop.php" class="mx-6"> Shop All </a>
-    <a href="shop-squid.php" class="mx-6"> Shop Squid </a>
+    <ul>
+        <li class="mx-6"><a href="shop.php"> Shop All </a></li>
+        <li class="mx-6"><a href="shop-squid.php" class="mx-6"> Shop Squid </a></li>
+    </ul>
+    
+    
     <a href="shop-fish.php" class="mx-6"> Shop Fish </a>
         <div class="row text-center py-5">
             <?php
