@@ -39,7 +39,7 @@
 
     ?>
     <div class="container">
-    <span class="display-4 p-3 mt-4"><i class="fa fa-shopping-cart"></i> Shop All Items </span>
+    <span class="display-4 p-3"><i class="fa fa-shopping-cart"></i> Shop All </span>
     <hr>
     <!-- HREF FOR CATEGORIES -->
     <ul class="list-group list-group-horizontal-sm">

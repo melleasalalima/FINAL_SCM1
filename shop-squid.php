@@ -39,7 +39,8 @@
 
     ?>
     <div class="container">
-    <h1><i class="fa fa-shopping-cart"></i> Shop Squid </h1><br>
+    <span class="display-4 p-3"><i class="fa fa-shopping-cart"></i> Shop Squid </span>
+    <hr>
     <ul class="list-group list-group-horizontal-sm">
         <li class="list-group-item mx-6"><a href="shop.php" class="text-info"> Shop All </a></li>
         <li class="list-group-item mx-6 active"><a href="shop-squid.php" class="text-light"> Shop Squid </a></li>
