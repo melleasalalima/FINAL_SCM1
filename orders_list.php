@@ -104,7 +104,7 @@
       <?php $rowcount=$rowcount+1; ?>
         <td><?php echo $row['o_deliverydate'];?></td>
         <td><?php echo $row['o_status'];?></td>
-        <td><img src="../payment_uploads/<?php echo $row['o_paymentimg'];?>" width="100" height="100"></td>
+        <td><img src="/payment_uploads/<?php echo $row['o_paymentimg'];?>" width="100" height="100"></td>
         <td><?php echo $row['o_name'];?></td>
         <td><?php echo $row['o_email'];?></td>
         <td><?php echo $row['o_tel'];?></td>
