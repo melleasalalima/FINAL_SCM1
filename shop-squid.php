@@ -40,7 +40,11 @@
     ?>
     <div class="container">
     <h1><i class="fa fa-shopping-cart"></i> Shop Squid </h1><br>
-    <a href="shop.php"> Shop All </a> || <a href="shop-squid.php"> Shop Squid </a> || <a href="shop-fish.php"> Shop Fish </a>
+    <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item mx-6"><a href="shop.php" class="text-info"> Shop All </a></li>
+        <li class="list-group-item mx-6 active"><a href="shop-squid.php" class="text-light"> Shop Squid </a></li>
+        <li class="list-group-item mx-6"><a href="shop-fish.php" class="text-info"> Shop Fish </a></li>
+    </ul>
         <div class="row text-center py-5">
             <?php
 
