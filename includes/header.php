@@ -57,5 +57,5 @@
 
             </div>
         </nav>
-        <p class="animated animate__bounce moving-text h-25">Welcome to Velen & Anna's Seafood Stalls! <i class="fa fa-star"></i>  We offer fresh seafood items</p>
+        <p class="animated animate__bounce moving-text h-25 h4">Welcome to Velen & Anna's Seafood Stalls! <i class="fa fa-star"></i>  We offer fresh seafood items</p>
     </header>
