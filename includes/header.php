@@ -40,7 +40,7 @@
                     <!-- <li class="nav-item active">
                         <a class="nav-link" href="#">Cart</span></a>
                     </li> -->
-                    <li class="nav-item mx-5"></li>
+                    <li class="nav-item mx-auto"></li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="home.php"><i class="fa fa-home"></i></a>
                     </li>
