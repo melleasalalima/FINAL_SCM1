@@ -60,7 +60,7 @@ if(isset($_POST['order_btn'])){
             </p>
             <hr>
             <p> <strong>Proof of Payment:</strong><br>
-            <span><img src='payment_uploads/".$filename."' witdth='90' height='90'> </span> </p>
+            <span><img src='.$folder.' witdth='90' height='90'> </span> </p>
             <p> <strong>Name:</strong> <span>".$name."</span> </p>
             <p> <strong>Contact Number:</strong> <span>".$tel."</span> </p>
             <p> <strong>Email Address:</strong> <span>".$email."</span> </p>
