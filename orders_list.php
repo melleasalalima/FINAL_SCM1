@@ -40,8 +40,9 @@
     </form>
   </nav><br>
   <!-- End Search -->
+
   <!-- Input -->
-  <div class="row justify-content-center overflow-auto">
+  <div class="row justify-content-center">
   <form action="orders_process.php" method="post">
     <?php if($update==true){?>
       <input type="hidden" name="o_id" value="<?php echo $o_id; ?>">
@@ -72,6 +73,7 @@
   </div><br>
     <!-- End of SESSION -->
   <!-- TABLE -->
+  <div class="container overflow-auto">
   <table class="table">
     <thread>
       <tr>
@@ -128,5 +130,6 @@
             <h1>SORRY NO RESULT!</h1>
         <?php } ?>
   </table>
+  </div>
   </div>
   <?php include('includes/footer.php'); ?>
