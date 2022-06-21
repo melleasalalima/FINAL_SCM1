@@ -38,7 +38,7 @@
     };
 
     ?>
-    <div class="container">
+    <div class="container-fluid">
     <h1><i class="fa fa-shopping-cart"></i> Shop All Items </h1><br>
     <!-- HREF FOR CATEGORIES -->
     <a href="shop.php"> Shop All </a> || <a href="shop-squid.php"> Shop Squid </a> || <a href="shop-fish.php"> Shop Fish </a>
