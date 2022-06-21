@@ -75,7 +75,7 @@
     </div>
   </div><br>
     <!-- End of SESSION -->
-    <div class="container">
+    <div class="container-fluid">
 
  
   <!-- TABLE -->
