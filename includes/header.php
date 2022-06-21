@@ -44,7 +44,7 @@
                         <a class="nav-link" href="home.php"><i class="fa fa-home"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.php"><i class="fa fa-fishing-rod"></i> Shop Now</a>
+                        <a class="nav-link" href="shop.php"><i class="fa fa-fish"></i> Shop Now</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="shop.php"><i class="fa fa-user"></i> My Account</a>
