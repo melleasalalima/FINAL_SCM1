@@ -42,16 +42,16 @@
                     </li> -->
                     <li class="nav-item mx-5"></li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="home.php"><i class="fa fa-home"> Home </i></a>
+                        <a class="nav-link" href="home.php"><i class="fa fa-home"> HOME </i></a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="shop.php"><i class="fa fa-fish"></i> Shop Now</a>
+                        <a class="nav-link" href="shop.php"><i class="fa fa-fish"></i> ALL PRODUCTS </a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="shop.php"><i class="fa fa-user"></i> My Account</a>
+                        <a class="nav-link" href="shop.php"><i class="fa fa-user"></i> MY ACCOUNT </a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart <span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
+                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> CART <span class="badge badge-light badge-pill"><?php echo $row_count; ?></span></a>
                     </li>
                 </ul>
                 <!-- <form class="form-inline my-2 my-lg-0">
