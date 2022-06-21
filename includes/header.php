@@ -42,7 +42,7 @@
                     </li> -->
                     <li class="nav-item mx-5"></li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link" href="home.php"><i class="fa fa-home"></i></a>
+                        <a class="nav-link" href="home.php"><i class="fa fa-home"> Home </i></a>
                     </li>
                     <li class="nav-item mx-3">
                         <a class="nav-link" href="shop.php"><i class="fa fa-fish"></i> Shop Now</a>
