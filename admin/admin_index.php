@@ -36,9 +36,10 @@
   </nav><br>
   <!-- End Search -->
   <!-- Input -->
-  <div class="container shadow p-3 mb-3 mt-3">
+
   <form action="admin_process.php" method="post">
     <?php if($update==true){?>
+      <div class="container shadow p-3 mb-3 mt-3">
       <input type="hidden" name="id" value="<?php echo $id; ?>">
       <div class="form-row">
       <!-- Username -->
