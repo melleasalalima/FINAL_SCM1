@@ -98,7 +98,9 @@
             <label>Password</label>
               <input type="password"  class="form-control" name="password" required>
             </div>
-      <button type="submit" name="update" class="btn btn-warning">Update</button>
+            <div>
+            <button type="submit" name="update" class="btn btn-warning">Update</button>
+            </div>
     <?php } ?>
       </div></div>
   </form><br>
